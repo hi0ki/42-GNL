@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:00:20 by eel-ansa          #+#    #+#             */
-/*   Updated: 2024/01/23 19:03:47 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:45:43 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 #  define BUFFER_SIZE 6
 # endif
 
-# include <stdio.h>
-# include <string.h>
+# include <limits.h>
 # include <stdlib.h>
-# include <fcntl.h>
 # include <unistd.h>
+#include <fcntl.h>
+#include <stdio.h>
 
 char	*get_next_line(int fd);
 char	*ft_save(char *save);

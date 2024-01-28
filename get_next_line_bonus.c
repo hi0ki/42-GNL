@@ -6,12 +6,11 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:38:20 by eel-ansa          #+#    #+#             */
-/*   Updated: 2024/01/23 19:42:43 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2024/01/23 22:02:25 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-#include <limits.h>
 
 char	*ft_read(int fd, char *save)
 {
@@ -89,7 +88,7 @@ char	*get_next_line(int fd)
 	static char	*save[OPEN_MAX];
 	char		*line;
 
-	if (BUFFER_SIZE <= 0 || (fd <= 2 && fd == -1))
+	if (fd > OPEN_MAX || BUFFER_SIZE <= 0 || (fd <= 2 && fd == -1))
 		return (NULL);
 	save[fd] = ft_read(fd, save[fd]);
 	if (!save[fd])

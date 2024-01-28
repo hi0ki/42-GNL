@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 19:38:34 by eel-ansa          #+#    #+#             */
-/*   Updated: 2024/01/23 19:40:34 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:16:02 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 6
+#  define BUFFER_SIZE 4
 # endif
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <fcntl.h>
 # include <unistd.h>
 
 char	*get_next_line(int fd);

@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:00:13 by eel-ansa          #+#    #+#             */
-/*   Updated: 2024/01/23 19:33:32 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2024/01/26 21:48:16 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_read(int fd, char *save)
 		save = ft_strjoin(save, buffer);
 	}
 	free(buffer);
-	buffer = NULL;
 	return (save);
 }
 
@@ -75,11 +74,9 @@ char	*ft_save(char *save)
 	{
 		str = ft_strdup(save + index + 1);
 		free(save);
-		save = NULL;
 		return (str);
 	}
 	free(save);
-	save = NULL;
 	return (NULL);
 }
 
@@ -94,10 +91,10 @@ char	*get_next_line(int fd)
 	if (!save)
 	{
 		free(save);
-		save = NULL;
 		return (NULL);
 	}
 	line = ft_line(save);
 	save = ft_save(save);
+	// system("leaks a.out");
 	return (line);
 }
