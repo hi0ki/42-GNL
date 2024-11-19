@@ -1,7 +1,7 @@
 # get_next_line
 
 ## Description
-Get Next Line (GNL) is a function that reads a line from a file descriptor. When called in a loop, get_next_line returns the file's content line by line. This project is part of the 42 Network cursus and helps understand file descriptors, static variables, and memory management in C.
+Get Next Line (GNL) is a function that reads a line from a file descriptor. When called in a loop, get_next_line returns the file's content line by line. This project is part of the 42 Network cursus and helps understand file descriptors, static variables, and memory management in C. 
 
 ## Function Prototype
 ```c
